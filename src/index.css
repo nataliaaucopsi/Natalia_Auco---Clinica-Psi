@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@100;200;300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Custom fine-grain adjustments */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Disable heavy SVG noise filter on mobile to achieve silky-smooth 60fps scrolling */
+@media (max-width: 768px) {
+  .paper-texture::before {
+    display: none !important;
+  }
+}
+
+/* For 3D flip card */
+.perspective {
+  perspective: 2000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom scrollbar hides */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base style resets */
+body {
+  background-color: #f3eee7;
+  color: #2C2A27;
+}
+
+/* WhatsApp Widget Variables & Styles */
+:root {
+  --wa-brand: #25D366;         /* Verde clássico do logo/botão do WA */
+  --wa-brand-hover: #1EBE57;   
+  --wa-header: #008069;        /* Verde escuro do cabeçalho do WA */
+  --wa-bg: #EFEAE2;            /* Bege claro do fundo da conversa */
+  --text-dark: #111B21;
+  --text-light: #FFFFFF;
+  --shadow-widget: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.wa-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.wa-fab {
+  width: 60px;
+  height: 60px;
+  background-color: var(--wa-brand);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  border: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  pointer-events: auto;
+}
+
+.wa-fab:hover {
+  transform: scale(1.08);
+  background-color: var(--wa-brand-hover);
+}
+
+.wa-fab svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--text-light);
+}
+
+.wa-notification-dot {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #FF0000;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.wa-chat-window {
+  width: 340px;
+  background-color: var(--wa-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-widget);
+  margin-bottom: 20px;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  transform-origin: bottom right;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.wa-chat-window.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.wa-header {
+  background-color: var(--wa-header);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.wa-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  background-color: #ddd;
+}
+
+.wa-avatar-wrapper {
+  position: relative;
+}
+
+.wa-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  background-color: #25D366;
+  border-radius: 50%;
+  border: 2px solid var(--wa-header);
+}
+
+.wa-info {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-light);
+}
+
+.wa-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.wa-status {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.wa-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.wa-close-btn:hover {
+  opacity: 1;
+}
+
+.wa-body {
+  padding: 20px;
+  background-image: radial-gradient(#d5cdc4 1px, transparent 0);
+  background-size: 15px 15px;
+}
+
+.wa-message {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  padding: 14px 16px;
+  border-radius: 0px 12px 12px 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.wa-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent var(--text-light) transparent transparent;
+}
+
+.wa-footer {
+  padding: 0 20px 20px 20px;
+  background-color: transparent;
+}
+
+.wa-cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--wa-brand);
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  gap: 8px;
+}
+
+.wa-cta-button:hover {
+  background-color: var(--wa-brand-hover);
+}
+
+.wa-cta-button svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+@media (max-width: 480px) {
+  .wa-widget-container {
+    bottom: 16px;
+    right: 16px;
+  }
+  .wa-chat-window {
+    width: calc(100vw - 32px);
+  }
+}
