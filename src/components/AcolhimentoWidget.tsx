@@ -42,9 +42,9 @@ export default function AcolhimentoWidget() {
 
   return (
     <div id="acolhimento-interativo" className="relative w-full max-w-[540px] mx-auto bg-white border border-[#E8E2D8] rounded-[24px] p-8 md:p-12 shadow-xs hover:shadow-md transition-shadow duration-300 text-center overflow-hidden min-h-[420px] flex flex-col justify-center">
-      {/* Tactile Analog Noise Overlay */}
+      {/* Tactile Analog Noise Overlay - hidden on mobile to prevent GPU scroll crashes */}
       <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-[0.035] mix-blend-multiply"
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.035] mix-blend-multiply hidden md:block"
         style={{
           backgroundImage: `url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>')`
         }}
