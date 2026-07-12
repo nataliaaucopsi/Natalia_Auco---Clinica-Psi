@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
   return {
-    base: '/Natalia-Auco-Psicologa/',
+    base: command === 'serve' ? '/' : '/Natalia-Auco-Psicologa/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
