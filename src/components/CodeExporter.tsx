@@ -381,7 +381,7 @@ export default function CodeExporter() {
   </nav>
 
   <!-- ==================== HEADER / HERO ==================== -->
-  <header class="pt-6 pb-16 md:pb-24 text-center w-full" id="inicio">
+  <header class="pt-6 pb-20 md:pb-32 text-center w-full" id="inicio">
     <!-- Elegant Widescreen Decorative Banner with soft bottom blending -->
     <div class="w-full overflow-hidden mb-10 md:mb-12 bg-[#FAF8F5]">
       <div class="relative w-full max-w-7xl mx-auto px-4 md:px-8">
@@ -396,10 +396,10 @@ export default function CodeExporter() {
       </div>
     </div>
 
-    <div class="max-w-4xl mx-auto px-4 relative z-10">
-      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-[#2C2A27] leading-tight tracking-tight">
-        Encontre um espaço seguro para cuidar de <br class="hidden md:inline" />
-        <span id="typewriter-container" class="text-[#607762] italic font-medium relative inline-block md:mt-2">
+    <div class="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-[#2C2A27] leading-tight tracking-tight min-h-[140px] sm:min-h-[120px] md:min-h-[144px] lg:min-h-[180px] flex flex-col justify-center items-center">
+        <span>Encontre um espaço seguro para cuidar de</span>
+        <span id="typewriter-container" class="text-[#607762] italic font-medium relative inline-block md:mt-2 min-h-[1.2em]">
           <span id="typewriter-text"></span><span id="typewriter-cursor" class="inline-block w-[2px] h-[1.1em] bg-[#607762] ml-1 absolute -right-[4px] top-[10%] transition-opacity duration-100"></span>
         </span>
       </h1>

@@ -36,7 +36,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="pt-6 pb-16 text-center w-full" id="inicio">
+    <header className="pt-6 pb-20 md:pb-32 text-center w-full" id="inicio">
       {/* Elegant Widescreen Decorative Banner with soft bottom blending */}
       <div className="w-full overflow-hidden mb-10 md:mb-12 bg-[#FAF8F5]">
         <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8">
@@ -44,7 +44,7 @@ export default function Header() {
             <img 
               src="https://i.ibb.co/Ld2BkQdf/Banner-clinica-definitivo.jpg" 
               alt="Banner decorativo" 
-              className="w-full h-full object-cover object-center scale-[1.35] sm:scale-[1.25] md:scale-[1.2] select-none pointer-events-none block"
+              className="w-full h-full object-cover object-center select-none pointer-events-none block"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -53,10 +53,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 relative z-10">
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#2C2A27] leading-tight tracking-tight">
-          Encontre um espaço seguro para cuidar de <br className="hidden md:inline" />
-          <span className="text-[#607762] italic font-medium relative inline-block md:mt-2">
+      <div className="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#2C2A27] leading-tight tracking-tight min-h-[140px] sm:min-h-[120px] md:min-h-[144px] lg:min-h-[180px] flex flex-col justify-center items-center">
+          <span className="block">Encontre um espaço seguro para cuidar de</span>
+          <span className="text-[#607762] italic font-medium relative inline-block md:mt-2 min-h-[1.2em]">
             {words[index].substring(0, subIndex)}
             <span className={`inline-block w-[2px] h-[1.1em] bg-[#607762] ml-1 absolute -right-[4px] top-[10%] transition-opacity duration-100 ${blink ? 'opacity-100' : 'opacity-0'}`}></span>
           </span>
