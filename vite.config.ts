@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(({ command }) => {
   return {
-    base: command === 'serve' ? '/' : '/Natalia-Auco-Psicologa/',
+    base: command === 'serve' ? '/' : '/Natalia_Auco---Clinica-Psi/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
