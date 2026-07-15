@@ -64,7 +64,7 @@ export default function Reviews() {
           <div className="flex items-center gap-4">
             <span className="font-serif font-semibold text-3xl text-[#2C2A27]">5,0</span>
             <div className="flex text-[#F59E0B] text-lg tracking-xs">★★★★★</div>
-            <span className="text-[#6B7270] text-sm font-medium">11 avaliações no Google</span>
+            <span className="text-[#6B7270] text-sm font-medium">14 avaliações no Google</span>
           </div>
           <a 
             href="https://www.google.com/search?hl=pt-BR&gl=br&q=Psic%C3%B3loga+Nat%C3%A1lia+Auco" 

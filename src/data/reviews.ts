@@ -2,6 +2,33 @@ import { Review } from '../types';
 
 export const reviewsData: Review[] = [
   {
+    id: 12,
+    name: 'placido ayadrii',
+    avatarLetter: 'P',
+    avatarBg: '#3B82F6',
+    date: 'há 8 horas',
+    stars: 5,
+    text: 'Natália es un Cielo de persona y muy profesional, mi pareja es brasileiro me recomendó empezar terapia y encontré a Natalia, a día de hoy la verdad que se lo agradezco. Yo soy español y la verdad que si eres también hispanohablante para ella no es problema por lo que también ya que puede comunicarse en español conmigo y eso es de puntuar. Es muy cercana, educada , comprometida , profesional y da gusto hablar con ella, me ayudó mucho en este tempo a conocerme más a mí mismo y a entender muchos aspectos que tengo que sanar, siento que realmente me acompaña y puedo contar con ella para una urgencia. PD: Sus gatitos son un amor jajaja Gracias :)'
+  },
+  {
+    id: 13,
+    name: 'VERUSKA Ribeiro',
+    avatarLetter: 'V',
+    avatarBg: '#2DD4BF',
+    date: 'há 2 dias',
+    stars: 5,
+    text: 'Nathalia psicóloga maravilhosa atenciosa,muito profissional passa muita confiança,seus atendimentos são excelentes.'
+  },
+  {
+    id: 14,
+    name: 'Karen Gabryelle',
+    avatarLetter: 'K',
+    avatarBg: '#C97D67',
+    date: 'há um mês',
+    stars: 5,
+    text: 'Excelente profissional ! Muito atenciosa, acolhedora e me deixa totalmente confortável para conversar nas sessões desde o primeiro momento. Sinto uma evolução enorme no meu crescimento pessoal desde que comecei, só tenho a agradecer, super recomendo o trabalho dela.'
+  },
+  {
     id: 1,
     name: 'Karine Silva',
     avatarLetter: 'K',

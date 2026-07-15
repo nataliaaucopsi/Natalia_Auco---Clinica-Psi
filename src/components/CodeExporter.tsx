@@ -1029,7 +1029,7 @@ export default function CodeExporter() {
         <div class="flex items-center gap-4">
           <span class="font-serif font-semibold text-3xl text-[#2C2A27]">5,0</span>
           <div class="flex text-[#F59E0B] text-lg tracking-xs">★★★★★</div>
-          <span class="text-[#6B7270] text-sm font-medium">11 avaliações no Google</span>
+          <span class="text-[#6B7270] text-sm font-medium">14 avaliações no Google</span>
         </div>
         <a 
           href="https://www.google.com/search?hl=pt-BR&gl=br&q=Psic%C3%B3loga+Nat%C3%A1lia+Auco" 
@@ -1045,6 +1045,72 @@ export default function CodeExporter() {
     <div class="relative">
       <div id="reviews-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory py-4 no-scrollbar items-start">
         
+        <!-- Review 12 (New) -->
+        <article id="review-12" class="flex-shrink-0 w-[310px] md:w-[340px] bg-white border border-[#E8E2D8] rounded-[22px] p-6 md:p-8 snap-start shadow-xs flex flex-col transition-all duration-300" style="height: 310px; min-height: 310px;">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-serif font-semibold text-lg flex-shrink-0 bg-[#3B82F6]">P</div>
+            <div>
+              <h3 class="font-serif font-semibold text-lg text-[#2A2F2B] flex items-center gap-1.5">
+                placido ayadrii
+                <span class="inline-block w-3.5 h-3.5 bg-[#10B981] rounded-full relative">
+                  <span class="absolute left-[4.5px] top-[2.5px] w-[4px] h-[7px] border-white border-r-2 border-b-2 rotate-45 transform"></span>
+                </span>
+              </h3>
+              <div class="text-xs text-[#6B7270] mt-0.5">há 8 horas</div>
+            </div>
+          </div>
+          <div class="text-[#F59E0B] text-sm tracking-xs mb-4">★★★★★</div>
+          <div class="flex-1 flex flex-col justify-between">
+            <p id="review-text-12" class="text-sm md:text-[0.95rem] font-light text-[#6B7270] leading-relaxed line-clamp-3">
+              Natália es un Cielo de persona y muy profesional, mi pareja es brasileiro me recomendó empezar terapia y encontré a Natalia, a día de hoy la verdad que se lo agradezco. Yo soy español y la verdad que si eres también hispanohablante para ella no es problema por lo que también ya que puede comunicarse en español conmigo y eso es de puntuar. Es muy cercana, educada , comprometida , profesional y da gusto hablar con ella, me ayudó mucho en este tempo a conocerme más a mí mismo y a entender muitos aspectos que tengo que sanar, siento que realmente me acompaña y puedo contar con ella para una urgencia. PD: Sus gatitos son un amor jajaja Gracias :)
+            </p>
+            <button onclick="toggleReviewExpand(12)" id="review-btn-12" class="text-left text-xs font-semibold text-[#7A9B82] hover:text-[#65856D] hover:underline mt-4 pt-2 border-t border-neutral-100/50">Leia mais</button>
+          </div>
+        </article>
+
+        <!-- Review 13 (New) -->
+        <article id="review-13" class="flex-shrink-0 w-[310px] md:w-[340px] bg-white border border-[#E8E2D8] rounded-[22px] p-6 md:p-8 snap-start shadow-xs flex flex-col transition-all duration-300" style="height: 310px; min-height: 310px;">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-serif font-semibold text-lg flex-shrink-0 bg-[#2DD4BF]">V</div>
+            <div>
+              <h3 class="font-serif font-semibold text-lg text-[#2A2F2B] flex items-center gap-1.5">
+                VERUSKA Ribeiro
+                <span class="inline-block w-3.5 h-3.5 bg-[#10B981] rounded-full relative">
+                  <span class="absolute left-[4.5px] top-[2.5px] w-[4px] h-[7px] border-white border-r-2 border-b-2 rotate-45 transform"></span>
+                </span>
+              </h3>
+              <div class="text-xs text-[#6B7270] mt-0.5">há 2 dias</div>
+            </div>
+          </div>
+          <div class="text-[#F59E0B] text-sm tracking-xs mb-4">★★★★★</div>
+          <p class="text-sm md:text-[0.95rem] font-light text-[#6B7270] leading-relaxed flex-1">
+            Nathalia psicóloga maravilhosa atenciosa,muito profissional passa muita confiança,seus atendimentos são excelentes.
+          </p>
+        </article>
+
+        <!-- Review 14 (New) -->
+        <article id="review-14" class="flex-shrink-0 w-[310px] md:w-[340px] bg-white border border-[#E8E2D8] rounded-[22px] p-6 md:p-8 snap-start shadow-xs flex flex-col transition-all duration-300" style="height: 310px; min-height: 310px;">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-serif font-semibold text-lg flex-shrink-0 bg-[#C97D67]">K</div>
+            <div>
+              <h3 class="font-serif font-semibold text-lg text-[#2A2F2B] flex items-center gap-1.5">
+                Karen Gabryelle
+                <span class="inline-block w-3.5 h-3.5 bg-[#10B981] rounded-full relative">
+                  <span class="absolute left-[4.5px] top-[2.5px] w-[4px] h-[7px] border-white border-r-2 border-b-2 rotate-45 transform"></span>
+                </span>
+              </h3>
+              <div class="text-xs text-[#6B7270] mt-0.5">há um mês</div>
+            </div>
+          </div>
+          <div class="text-[#F59E0B] text-sm tracking-xs mb-4">★★★★★</div>
+          <div class="flex-1 flex flex-col justify-between">
+            <p id="review-text-14" class="text-sm md:text-[0.95rem] font-light text-[#6B7270] leading-relaxed line-clamp-3">
+              Excelente profissional ! Muito atenciosa, acolhedora e me deixa totalmente confortável para conversar nas sessões desde o primeiro momento. Sinto uma evolução enorme no meu crescimento pessoal desde que comecei, só tenho a agradecer, super recomendo o trabalho dela.
+            </p>
+            <button onclick="toggleReviewExpand(14)" id="review-btn-14" class="text-left text-xs font-semibold text-[#7A9B82] hover:text-[#65856D] hover:underline mt-4 pt-2 border-t border-neutral-100/50">Leia mais</button>
+          </div>
+        </article>
+
         <!-- Review 1 -->
         <article id="review-1" class="flex-shrink-0 w-[310px] md:w-[340px] bg-white border border-[#E8E2D8] rounded-[22px] p-6 md:p-8 snap-start shadow-xs flex flex-col transition-all duration-300" style="height: 310px; min-height: 310px;">
           <div class="flex items-center gap-4 mb-4">
